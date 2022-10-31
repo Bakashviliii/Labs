@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+int main ()
+
+ {
+float side_a, side_b,area_S, sum_of_side_P;
+cout<<"Введите значение a: "<<endl;
+cin>> side_a ;
+cout<<"Введите значение b: "<<endl;
+cin>> side_b ;
+area_S= side_a*side_b;
+sum_of_side_P=2*( side_a+ side_b);
+ cout<<"Площадь S= "<< area_S<<endl;
+ cout<<"Периметр P= "<< sum_of_side_P<<endl;
+ return 0;
+}
+
+{
+float diameter,Length;
+const float pi=3.14;
+cout<<"Введите значение диаметра: "<<endl;
+cin>> diameter ;
+ Length=diameter*pi;
+ cout<<"Значение длины окружности = "<<Length<<endl;
+ return 0;
+}
+
+{
+float num_a, num_b,num_c;
+cout<<"Введите значение a: "<<endl;
+cin>> num_a ;
+cout<<"Введите значение b: "<<endl;
+ cin>> num_b;
+ side_c=( num_a+ num_b)/2;
+ cout<<"Значение c= "<< num_c<<endl;
+ return 0;
+}
+
+{
+float num_a, num_b, value_c, value_d, value_e, value_f;
+cout<<"Введите значение a: "<<endl;
+cin>> num_a ;
+cout<<"Введите значение b: "<<endl;
+ cin>> num_b;
+ value_c=pow(num_a,2)+pow(num_b,2);
+ value_d=pow(num_a,2)-pow(num_b,2);
+ value_e=pow(num_a,2)*pow(num_b,2);
+value_f=pow(num_a,2)/pow(num_b,2);
+ cout<<"Значение c= "<< value_c<<endl;
+ cout<<"Значение d= "<< value_d<<endl;
+ cout<<"Значение e= "<< value_e<<endl;
+ cout<<"Значение f= "<< value_f<<endl;
+ return 0;
+}
+
+{
+float num_a, num_b,value_c, value_d, value_e, value_f;
+cout<<"Введите значение a: "<<endl;
+cin>> num_a ;
+cout<<"Введите значение b: "<<endl;
+ cin>> num_b;
+ value_c = abs(num_a)+abs(num_b);
+ value_d = abs(num_a)-abs(num_b);
+ value_e = abs(num_a)*abs(num_b);
+ value_f = abs(num_a)/abs(num_b);
+ cout<<"Значение c = "<< value_c<<endl;
+ cout<<"Значение d = "<< value_d<<endl;
+ cout<<"Значение e= "<<value_e<<endl;
+ cout<<"Значение f= "<<value_f<<endl;
+ return 0;
+}
