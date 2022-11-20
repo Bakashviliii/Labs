@@ -1,0 +1,131 @@
+//Листинг 1
+#include <iostream>
+#include <math.h>
+using namespace std;
+float PowerA3(float A, float B) 
+{
+   float A3 = pow (A,3);
+   B = A3;   
+    return B;
+}
+int main ()
+{
+    float num1;
+    int i;
+    float B;
+    for (i = 1; i <= 5; i++)
+    {
+    cout << " Введите  число: \n";
+    cin >> num1;
+    cout <<"Куб числа " << num1<< " равен " << PowerA3(num1,B)<< "\n";
+    }
+}
+
+//Листинг 2
+#include <iostream>
+using namespace std;
+int Sign(float X) 
+{
+   if (X < 0)
+   return -1;
+   if (X == 0)
+   return 0;
+   else 
+   return 1;
+}
+int main ()
+{
+    float numA;
+    float numB;
+    cout << " Введите  числа A и B: ";
+    cin >> numA >> numB;
+    float sumOfNum = Sign(numA) + Sign(numB);
+    cout << " Значение выражения Sign(A) + Sign(B): "<< sumOfNum;
+}
+
+//Листинг 3
+#include <math.h>
+#include <iostream>
+using namespace std;
+float RingS(float R1, float R2) 
+{
+   float areaOfRing;
+     float pi = 3.14; 
+    if (R1 > R2)
+     areaOfRing = pi * (pow(R1,2) - pow(R2,2));
+     return areaOfRing;  
+}
+int main ()
+{
+ float R1;
+ float R2;
+ int i = 1;
+  while (i <= 3)
+  {
+   cout <<" Введите радиусы R1 и R2 окружностей (R1 > R2)\n ";
+   cin >> R1>>R2;
+   cout <<" Площадь кольца "<< RingS(R1,R2) << "\n";
+   ++i;
+  }
+}
+
+//Листинг 4
+#include <iostream>
+using namespace std;
+int  Quarter(float x, float y) 
+{
+   if (x > 0 & y > 0)
+   return 1;
+   if (x > 0 & y < 0)
+   return 2;
+   if (x < 0 & y < 0) 
+   return 3;
+   else
+   return 4;
+}
+int main ()
+{
+    float coordinateX1,coordinateY1;
+    int i = 1;
+    while (i <= 3)
+    {
+    cout << " Введите  координаты  точки: ";
+    cin >> coordinateX1 >>  coordinateY1;
+    cout << "Точка лежит в" << " "<< Quarter (coordinateX1,coordinateY1 ) << " четверти\n ";
+    ++i;
+    }
+}
+
+//Листинг 5
+#include <iostream>
+
+using namespace std;
+
+
+ float Fact2(int N) 
+{
+    int i ; 
+    int j ;
+    int N1 ;
+   if (N % 2 == 0)
+   {
+      N1 = 2;
+     for (i = 4; i <= N; i= i + 2)
+     N1 = i* N1;
+     return N1;
+   }
+   else if (N % 2!=0)
+   {
+     N1 = 1;
+     for (i = 3; i <= N; i= i + 2)
+     N1 = i*N1;
+   }
+    return N1;
+}
+int main ()
+{
+    int N;
+    cout << " Введите  число N: ";
+    cin >> N;
+    cout << Fact2(N);
+}
