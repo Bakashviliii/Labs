@@ -1,3 +1,4 @@
+//Листинг 1
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -13,9 +14,15 @@ printf("Введите значения координаты точки 2");
 scanf("%d %d",&coordinateX2,&coordinateY2);
     float destine1=sqrt(pow(coordinateX1-coordinateX2,2)+pow(coordinateY1-coordinateY2,2) );
 printf("Расстояние между двумя точками %.2f\n",destine1);
+
 }
 
 
+
+//Листинг 2
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 int main()
 {
     float varCoordinateA;
@@ -31,7 +38,10 @@ printf ("Длина BC: %.f\n",varLengthBC);
 printf ("Сумма длин: %.f",varSumLength);
 }
 
-
+//Листинг 3
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 int main()
 {
     float varCoordinateA;
@@ -52,7 +62,10 @@ else
 printf ("Неправильное расположение координат точек");
 }
 
-
+//Листинг 4
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 int main()
 {
     int coordinateX1;
@@ -69,7 +82,10 @@ printf("Периметр прямоугольника равна %.d\n",perimetr
 printf("Площадь прямоугольника равна %.d",AreaS);
 }
 
-
+//Листинг 5
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 int main()
 {
     int coordinateX1;
