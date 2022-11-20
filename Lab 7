@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+int main()
+{
+    setlocale (LC_ALL,"Russian");
+    float varAngel;
+    printf("Введите значение угла a в градусах:");
+    scanf("%f",&varAngel);
+    const int pi=180;
+    if (0<=varAngel<=360)
+    {
+     float varRad=varAngel/pi;
+     printf("Угол a в радианах:%.2f Пи",varRad);
+    }
+    else
+    printf("Недопустимое значение угла");
+}
+
+
+int main()
+{
+    setlocale (LC_ALL,"Russian");
+    float varRad;
+    printf("Введите значение угла a в радианах:");
+    scanf("%f",&varRad);
+     const int pi=180;
+    if (0<=varRad<=2)
+    {
+     float varAngel=varRad*pi;
+     printf("Угол a в градусах:%.2f C",varAngel);
+    }
+    else
+    printf("Недопустимое значение угла a");
+}
+
+
+int main()
+{
+    setlocale (LC_ALL,"Russian");
+    float varPriceA;
+    printf(" Введите стоимость A ");
+    scanf("%f",&varPriceA);
+    float varWeightX;
+    printf(" Введите количество килограмм X ");
+    scanf("%f",&varWeightX);
+    float varPriceKilo=varPriceA/varWeightX;
+    float varWeightY;
+    printf(" Введите количество килограмм Y ");
+    scanf("%f",&varWeightY);
+    float varPriceY=varPriceA*varWeightY/varWeightX;
+    printf(" Стоимость 1 киллограмма конфет равна: %.f\n ",varPriceKilo);
+    printf(" Стоимость %.f киллограммов конфет равна: %.f\n ",varWeightY,varPriceY);
+}
+
+
+int main()
+{
+    setlocale (LC_ALL,"Russian");
+    float varSpeed1;
+    printf(" Введите скорость V1:");
+    scanf("%f",&varSpeed1);
+    float varSpeed2;
+    printf(" Введите скорость V2:");
+    scanf("%f",&varSpeed2);
+    float varSumSpeed=varSpeed1+varSpeed2;
+    float varTime;
+    printf(" Введите время T:");
+    scanf("%f",&varTime);
+    float varDist=varSumSpeed*varTime;
+    printf(" Расстояние равно: %.f\n ",varDist);
+}
+
+
+int main ()
+{
+    Setlocale (LC_ALL,"Russian");
+    float varA;
+    printf("Введите значение A");
+    scanf("%f",&varA);
+    float varB;
+    printf("Введите значение B");
+    scanf("%f",&varB);
+    if (varA!=0)
+     {
+        float varX=-varB/varA;
+        printf("Х:%.2f",varX);
+     }
+    else
+    printf ("уравнение не имеет решений");
+}
+
+
+int main()
+{
+    setlocale(LC_ALL,"0");
+    float chisloA1;
+    float chisloB1;
+    float chisloC1;
+    printf ("Введите числа A1,B1,C1");
+    scanf("%f %f %f",&chisloA1,&chisloB1,&chisloC1);
+    float chisloA2;
+    float chisloB2;
+    float chisloC2;
+    float varY;
+    float varX;
+    printf ("Введите числа A2,B2,C2");
+    scanf("%f %f %f",&chisloA2,&chisloB2,&chisloC2);
+     if (chisloC1==0 & chisloC2==0)
+   {
+     printf("нет решения");
+   }
+    else if (chisloA2==0)
+     {
+     varY = chisloC2 / chisloB2;
+     varX = (chisloC1 - chisloB1 * varY) / chisloA1;
+    printf("Решение уравнения {%.2f;%.2f} ",varX,varY);
+     }
+    else if (chisloA1==0)
+     {
+        varY = chisloC1 / chisloB1;
+        varX = (chisloC2 - chisloB2 * varY) / chisloA2;
+        printf("Решение уравнения {%.2f;%.2f} ",varX,varY);
+     }
+   else if (chisloB1==0)
+     {
+        varX = chisloC1 / chisloA1;
+        varY = (chisloC2 - chisloA2 * varY) / chisloB2;
+        printf("Решение уравнения {%.2f;%.2f} ",varX,varY);
+     }
+    else if (chisloB2==0)
+     {
+        varX = chisloC2 / chisloA2;
+        varY = (chisloC2 - chisloA1 * varY) / chisloB1;
+        printf("Решение уравнения {%.2f;%.2f} ",varX,varY);
+     }
+   else if (chisloA1!=0 & chisloA2!=0 & chisloB1!=0 & chisloB2!=0)
+   {
+    float varY=(chisloC2 * chisloA1 - chisloA2 * chisloC1) / (chisloB2 * chisloA1 - chisloA2 * chisloB1);
+    float varX=(chisloC1 - chisloB1 * varY) / chisloA1;
+    printf("Решение уравнения {%.2f;%.2f} ",varX,varY);
+   }
+   
+}    
+
