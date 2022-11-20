@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale (LC_ALL," Russian ");
+    int amountOfBytes;
+    printf (" Введите количество байтов ");
+    scanf("%d",&amountOfBytes);
+    int N=amountOfBytes%1024;
+    if (N==0)
+    {
+    int amountOfKilobytes=amountOfBytes/1024;
+    printf (" Количество полных килобайтов %.d ",amountOfKilobytes);
+    }
+    else if (N!=0)
+    {
+     int Kilobytes=(amountOfBytes/1024) + 1;
+        printf (" Количество полных килобайтов %.d ",Kilobytes);
+    }
+    
+}
+
+
+int main()
+{
+    setlocale (LC_ALL," Russian ");
+    int varA;
+    int varB;
+    printf(" Введите A и B при условии A > B:  ");
+    scanf("%d %d",&varA,&varB);
+    if (varA > varB)
+    {
+      int remainOfSegment=varA%varB;
+      int amountOfSegment=(varA-remainOfSegment)/varB;
+        printf(" Количество отрезков B размещенных на отрезке A:%.d ",amountOfSegment);
+    }
+    else
+    printf("A<B");
+}
+
+
+int main()
+{
+    setlocale (LC_ALL," Russian ");
+    int varA;
+    int varB;
+    printf(" Введите A и B при условии A > B:  ");
+    scanf("%d %d",&varA,&varB);
+    if (varA > varB)
+    {
+      int amountOfSegment=varA%varB;
+        printf(" Незанятая часть на отрезке A:%.d ",amountOfSegment);
+    }
+    else
+    printf("A<B");
+}
+
+
+
+int main()
+{
+    setlocale (LC_ALL," Russian ");
+    int chislo;
+    printf(" Введите двузначное число:  ");
+    scanf("%d",&chislo);
+    if (chislo>9 & chislo<100)
+    {
+      int firstnum=chislo%10;
+      int secondnum=(chislo-firstnum)/10;
+      printf(" Число после перестановки цифр:%.d%.d ",firstnum,secondnum);
+    }
+
+    else
+    printf(" Число не двузначное ");
+}
+
+
+
+int main()
+{
+    setlocale (LC_ALL," Russian ");
+    int chislo;
+    printf(" Введите трехзначное число: ");
+    scanf("%d",&chislo);
+    if (chislo>99 & chislo<1000)
+    {
+      int secondnum=(chislo%100-chislo%10)/10;
+      int thirdnum=chislo%100%10;
+      int firstnum=(chislo-thirdnum-secondnum)/100;
+      printf(" Число после перестановки цифр:%.d%.d%.d ",secondnum,thirdnum,firstnum);
+    }
+
+    else
+    printf(" Число не трехзначное ");
+}   
+
