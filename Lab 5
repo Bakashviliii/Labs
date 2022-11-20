@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+ int coordinateX1;
+ int coordinateX2;
+ int coordinateY1;
+int coordinateY2;
+printf("Введите значения координаты точки 1");
+scanf("%d %d",&coordinateX1,&coordinateY1);
+printf("Введите значения координаты точки 2");
+scanf("%d %d",&coordinateX2,&coordinateY2);
+    float destine1=sqrt(pow(coordinateX1-coordinateX2,2)+pow(coordinateY1-coordinateY2,2) );
+printf("Расстояние между двумя точками %.2f\n",destine1);
+}
+
+
+int main()
+{
+    float varCoordinateA;
+    float varCoordinateB;
+    float varCoordinateC;
+printf ("Введите координаты точек A,B,C");
+scanf("%f %f %f",&varCoordinateA,&varCoordinateB,&varCoordinateC);
+    float varLengthAC=abs(varCoordinateA - varCoordinateC);
+    float varLengthBC=abs(varCoordinateB - varCoordinateC);
+    float varSumLength=varLengthAC+varLengthBC;
+printf ("Длина AC: %.f\n",varLengthAC);
+printf ("Длина BC: %.f\n",varLengthBC);
+printf ("Сумма длин: %.f",varSumLength);
+}
+
+
+int main()
+{
+    float varCoordinateA;
+    float varCoordinateB;
+    float varCoordinateC;
+printf ("Введите координаты точек A,B,C");
+scanf("%f %f %f",&varCoordinateA,&varCoordinateB,&varCoordinateC);
+    if (varCoordinateA<varCoordinateC<varCoordinateB)
+    {
+    float varLengthAC=abs(varCoordinateA - varCoordinateC);
+    float varLengthBC=abs(varCoordinateB - varCoordinateC);
+    float varMultLength=varLengthAC * varLengthBC;
+printf ("Длина AC: %.f\n",varLengthAC);
+printf ("Длина BC: %.f\n",varLengthBC);
+printf ("Суммадлин: %.f",varMultLength);
+}
+else
+printf ("Неправильное расположение координат точек");
+}
+
+
+int main()
+{
+    int coordinateX1;
+    int coordinateX2;
+    int coordinateY1;
+    int coordinateY2;
+printf("Введитезначениякоординаты A");
+scanf("%d %d",&coordinateX1,&coordinateY1);
+printf("Введите значения координаты B");
+scanf("%d %d",&coordinateX2,&coordinateY2);
+    int perimetrP=abs(coordinateX1-coordinateX2)+abs(coordinateY1-coordinateY2);
+    int AreaS=abs(coordinateY1-coordinateY2)*abs(coordinateX1-coordinateX2);
+printf("Периметр прямоугольника равна %.d\n",perimetrP);
+printf("Площадь прямоугольника равна %.d",AreaS);
+}
+
+
+int main()
+{
+    int coordinateX1;
+    int coordinateX2;
+    int coordinateY1;
+    int coordinateY2;
+    int coordinateX3;
+    int coordinateY3;
+printf("Введите значения координаты A");
+scanf("%d %d",&coordinateX1,&coordinateY1);
+printf("Введите значения координаты B");
+scanf("%d %d",&coordinateX2,&coordinateY2);
+printf("Введите значения координаты C");
+scanf("%d %d",&coordinateX3,&coordinateY3);
+    int sideAC=sqrt(pow(coordinateX1-coordinateX3,2)+pow(coordinateY1-coordinateY3,2) );
+    int sideAB=sqrt(pow(coordinateX1-coordinateX2,2)+pow(coordinateY1-coordinateY2,2) );
+    int sideBC=sqrt(pow(coordinateX2-coordinateX3,2)+pow(coordinateY2-coordinateY3,2) );
+    if (sqrt(sideAC)+sqrt(sideAB)>sqrt(sideBC) & sqrt(sideAC)+sqrt(sideBC)>sqrt(sideAB) & sqrt(sideAB)+sqrt(sideBC)>sqrt(sideAC))
+    {
+    float perimetrP=sideAC+sideBC+sideAB;
+    float areaS=sqrt(perimetrP/2*(perimetrP/2-sideAC)*(perimetrP/2-sideAB)*(perimetrP/2-sideBC));
+printf("Периметр треугольника равен %.2f\n",perimetrP);
+printf("Площадь треугольника равен %.2f",areaS);
+    }
+else
+printf("Заданная фигура не треугольник");
+}
+
