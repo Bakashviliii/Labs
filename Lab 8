@@ -1,3 +1,4 @@
+//Листинг 1
 #include <stdio.h>
 #include <locale.h>
 
@@ -21,6 +22,9 @@ int main()
     
 }
 
+//Листинг 2
+#include <stdio.h>
+#include <locale.h>
 
 int main()
 {
@@ -39,6 +43,9 @@ int main()
     printf("A<B");
 }
 
+//Листинг 3
+#include <stdio.h>
+#include <locale.h>
 
 int main()
 {
@@ -56,7 +63,9 @@ int main()
     printf("A<B");
 }
 
-
+//Листинг 4
+#include <stdio.h>
+#include <locale.h>
 
 int main()
 {
@@ -75,7 +84,9 @@ int main()
     printf(" Число не двузначное ");
 }
 
-
+//Листинг 5
+ #include <stdio.h>
+#include <locale.h>
 
 int main()
 {
