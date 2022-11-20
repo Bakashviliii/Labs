@@ -1,0 +1,142 @@
+//Листинг 1
+#include <stdio.h>
+
+int main()
+{
+    int chisloA;
+    int chisloB;
+    int i;
+    int j;
+    printf(" Введите целые положительные числа A и B (A < B) ");
+    scanf("%d %d",&chisloA,&chisloB);
+    if (chisloA < chisloB & chisloA > 0 & chisloB > 0)
+    {
+          for (i = chisloA; i <= chisloB;i++)
+          { 
+          for (j=1; j <= i; j++)
+          printf ("%.d",i);
+          printf ("\n");
+          }
+    }
+    else 
+    printf(" Числа не подходят по условиям ");
+    return 0;
+}
+
+//Листинг 2
+#include <stdio.h>
+
+int main()
+{
+    int chisloA;
+    int chisloB;
+    printf("Введите положительные числа A и B (A > B): ");
+    scanf ("%d %d",&chisloA,&chisloB);
+    int i;
+    int j;
+    int chisloR;
+    if (chisloA > chisloB & chisloA > 0 & chisloB > 0)
+    {
+        for (i = chisloB; i <= chisloA; i = i + chisloB)
+        {
+            chisloR = chisloA-i;
+            if (chisloR < chisloB)
+            printf(" Длина незанятой части отрезка A = %.d ",chisloR);
+        }
+    }
+    else 
+    printf (" Числа не соответствуют условию ");
+    return 0;
+}
+
+//Листинг 3
+#include <stdio.h>
+int main ()
+{
+   int numN;
+   printf("Введите число N = ");
+   scanf ("%d", &numN);
+   int k = 0; 
+   int sumOfNum = 0;
+   while ( sumOfNum < numN) {
+        ++k;
+        sumOfNum = sumOfNum + k;
+   }
+   printf("Сумма чисел равна %.d число k равно %.d\n",sumOfNum,k);
+   return 0;
+}
+
+//Листинг 4
+#include <stdio.h>
+
+int main()
+{
+    float deposit = 1000;
+    int persent;
+    printf("Введите процент P по кредиту 0 < P < 25 : ");
+    scanf ("%d",&persent);
+    int i=1;
+    if (persent > 0 && persent < 25 )
+    {
+      while (deposit <=1100)
+      {
+          ++i;
+          deposit = deposit + deposit*persent/100;
+      }
+    
+        printf ("За %.d месяцев вклад стал равным %.f",i,deposit);
+    }
+    else 
+     printf ("Процент не соответствует условиям");
+    return 0;
+}
+
+//Листинг 5
+#include <stdio.h>
+
+int main()
+{
+    int numA;
+    int numB;
+    int i;
+    printf(" Введите целые положительные числа A и B  ");
+    scanf("%d %d",&numA, &numB);
+    if ( numA > 0 & numB > 0)
+    {
+         
+         while (numA != 0 & numB != 0)
+         {
+          if (numA > numB)
+          numA = numA % numB;
+          else
+          numB = numB % numA;
+         }
+       int  NOD = numA + numB;
+    printf ("НОД равен: %.d",NOD);  
+    }
+   else 
+   printf ("Числа не соответствуют условиям");
+    return 0;
+}
+
+//Листинг 6 
+#include <stdio.h>
+int main( )
+{
+   int num;
+   printf(" Введите число N > 1 : ");
+   scanf("%i",&num);
+   int numF1=1;
+   int numF2=1;
+   int numF0=0;
+   int k=2;
+ 
+   while (numF0 < num){
+       numF0 = numF2 + numF1;
+       numF2 = numF1;
+       numF1 = numF0;
+       ++k;
+   }
+   printf(" Порядковый номер числа Фибоначчи K:%i\n ",k);
+   return 0;
+}
