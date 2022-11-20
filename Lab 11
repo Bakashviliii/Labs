@@ -1,0 +1,165 @@
+//Листинг 1
+#include <stdio.h>
+
+int main()
+{
+   int chisloA;
+   int chisloB;
+   printf ("Введите значение A и B: ");
+   scanf("%d %d",&chisloA,&chisloB);
+   if (chisloA==chisloB)
+   {
+     float  chisloA = 0;
+     float  chisloB = 0;
+     printf ("Число A = %.f и число B = %.f",chisloA,chisloB);
+   }
+   else if (chisloA!=chisloB)
+   {
+       if(chisloA > chisloB)
+       {
+       chisloA;
+       chisloB=chisloA;
+       printf ("Число A = %.d и число B = %.d",chisloA,chisloB);
+       }
+       else if(chisloB > chisloA)
+       {
+       chisloB;
+       chisloA=chisloB;
+       printf ("Число A = %.d и число B = %.d",chisloA,chisloB);  
+       }
+       
+   }
+}
+
+//Листинг 2
+#include <stdio.h>
+
+int main()
+{
+   int chislo1;
+   int chislo2;
+   int chislo3;
+   printf ("Введите три разных числа: ");
+   scanf("%d %d %d",&chislo1,&chislo2,&chislo3);
+   if (chislo1>chislo2 & chislo3>chislo2)
+   {
+     int sumofnum=chislo1 + chislo3;
+     printf ("Сумма двух наибольших чисел = %.d", sumofnum);
+   }
+   else if (chislo2>chislo1 & chislo3>chislo1 )
+   {
+      int sumofnum=chislo2 + chislo3;
+      printf ("Сумма двух наибольших чисел = %.d", sumofnum);
+   }
+  else if(chislo2>chislo3 & chislo1>chislo3)
+       {
+          int sumofnum=chislo2 + chislo1;
+          printf ("Сумма двух наибольших чисел = %.d", sumofnum);
+       }
+  else     
+   printf ("Числа не соответствуют условиям");
+}
+
+
+//Листинг 3
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+float x1,x2,x3,y1,y2,y3,AB,AC;
+printf ("Введите значение координат точки A:\n");
+scanf ("%f %f",&x1,&y1);
+printf ("Введите значение координат точки B:\n");
+scanf ("%f %f",&x2,&y2);
+printf ("Введите значение координат точки С:\n");
+scanf ("%f %f",&x3,&y3);
+AB=pow(abs(x2-x1),2)+pow(abs(y2-y1),2);
+AC=pow(abs(x3-x1),2)+pow(abs(y3-y1),2);
+ if (AB < AC)
+ printf ("Точка B ближе к A, расстояние между точками равно: %.2f\n",sqrt(AB));
+ else if (AC < AB)
+ printf ("Точка C ближе к  A, расстояние между точками равно: %.2f\n",sqrt(AC));
+}
+
+
+//Листинг 4
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+int x1,x2;
+printf (" Введите значение координат точки :\n ");
+scanf ("%d %d",&x1,&y1);
+ if (x1 > 0 & y1 > 0)
+ printf (" Точка лежит в 1 четверти ");
+ else if (x1 < 0 & y1 < 0)
+ printf (" Точка лежит в 3 четверти ");
+ else if (x1 < 0 & y1 > 0)
+ printf (" Точка лежит в 2 четверти ");
+ else
+ printf (" Точка лежит в 4 четверти ");
+}
+
+
+//Листинг 5
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+int chislo;
+printf ("Введите число ");
+scanf ("%d",&chislo);
+ if (chislo==0)
+ printf (" Нулевое число ");
+ else if (chislo < 0 & chislo % 2 == 0)
+ printf (" Отрицательное четное число");
+ else if (chislo < 0 & chislo % 2 != 0)
+ printf (" Отрицательное нечетное число");
+ else if (chislo > 0 & chislo % 2 == 0)
+ printf (" Положительное четное число");
+ else if (chislo > 0 & chislo % 2 != 0)
+ printf (" Положительное нечетное число");
+}
+
+//Листинг 6
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+int chislo;
+printf ("Введите число ");
+scanf ("%d",&chislo);
+ if (chislo>0 & chislo<1000)
+ {
+  if (chislo <10)
+   {
+    if (chislo % 2 == 0)
+    printf (" Четное однозначное число");
+    else if ( chislo % 2 != 0)
+     printf (" Нечетное однозначное число");
+   }
+  else if (chislo > 9 & chislo < 100)
+  {
+   if (chislo % 2 == 0)
+   printf (" Четное двузначное число");
+   else if ( chislo % 2 != 0)
+   printf (" Нечетное двузначное число");  
+  }
+   else if (chislo > 99 & chislo < 1000)
+    {
+     if (chislo % 2 == 0)
+     printf (" Четное трехзначное число");
+     else if ( chislo % 2 != 0)
+     printf (" Нечетное трехзначное число");
+   }
+ }
+ return 0;
+}
