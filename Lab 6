@@ -1,3 +1,4 @@
+//Листинг 1
 #include <stdio.h>
 #include <math.h>
 #include <conio.h>
@@ -14,7 +15,10 @@ B=C;
 printf (" Значение A=%.f и B=%.f ",A,B);
 }
 
-
+//Листинг 2
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float A,B,C,temp;
@@ -31,7 +35,10 @@ B=temp;
 printf (" Значение A=%.f B=%.f C=%.f",A,B,C);
 }
 
-
+//Листинг 3
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float A,B,C,temp;
@@ -48,7 +55,10 @@ C=temp;
 printf (" Значение A=%.f B=%.f C=%.f",A,B,C);
 }
 
-
+//Листинг 4
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float x,y;
@@ -58,7 +68,10 @@ y=3*pow(x,6)-6*pow(x,2)-7;
 printf ("Значение y=%.f\n",y);
 }
 
-
+//Листинг 5
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float x,y;
@@ -68,7 +81,10 @@ y=4*pow(x-3,6)-7*pow(x-3,3)+2;
 printf ("Значение y=%.f\n",y);
 }
 
-
+//Листинг 6
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float A,B,C;
@@ -79,7 +95,10 @@ C=A*A*A*B;
 printf ("Значение A^8=%.f\n",C);
 }
 
-
+//Листинг 7
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
 int main()
 {
 float A,B,C,D;
@@ -90,4 +109,6 @@ C=pow(A,5);
 D=B*C*A*A*A*A*A;
 printf ("Значение A^15=%.f\n",D);
 }
+
+
 
