@@ -1,0 +1,107 @@
+//Листинг 1
+#include <stdio.h>
+int main()
+{
+    int N,K;
+    printf(" Введите количество секунд:  ");
+    scanf ("%d",&N);
+    K=N %60;
+    printf(" С последней минуты прошло %.d секунд ",K);
+    }
+//Листинг 2
+#include <stdio.h>
+int main()
+{
+    int k,N;
+    printf("Введите день года ");
+    scanf ("%d",&k);
+    if (k>=1 & k<=365)
+    {
+      if ( k%7==0)
+    printf(" Номер дня недели 0 ");
+     else if (N=k%7)
+     {
+      if (N>0 & N<7)
+      {
+     printf(" Номер дня недели %.d ",N);
+      }
+     }
+    }
+    else
+    printf(" Вы ввели число не из промежутка от 1 до 365 ");
+   
+}
+//Листинг 3
+#include <stdio.h>
+int main()
+{
+    int N,R,K;
+    printf(" Введите порядковый день года от 1 до 365 ");
+    scanf ("%d",&N);
+    printf(" Введите номер дня недели ");
+    scanf ("%d",&K);
+    if (N>0 & N<366)
+    {
+       if (K>0 & K<8)
+         { 
+           R=(N - (7 - (K - 1)))% 7;
+           float T =(float)R;
+             if ( T == 0)
+            {
+              printf(" Номер дня недели: 7 ");
+            }
+           else if (T!=0)
+           {
+           printf(" Номер дня недели:%.f ",T);
+           }
+         }
+    }
+
+}
+
+//Листинг 4
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL," ");
+    int LengthA;
+    int WidthB;
+    printf("Введите значения сторон A и B");
+    scanf("%d %d",&LengthA, &WidthB);
+    int Area1=LengthA*WidthB;
+    int SideC;
+    printf("Введите значение стороны С");
+    scanf("%d",&SideC);
+    int Area2=pow(SideC,2);
+    int Quotient1=LengthA/SideC;         //Количество квадратов по длине
+    int Quotient2=WidthB/SideC;          //Количесвто квадратов по ширине
+    int MultOfQuo1=Quotient1*Quotient2;  //Количество квадратов,размещенных на прямоугольнике
+    int MultOfArea=Area2*MultOfQuo1;     //Площадь занятой части прямоугольника
+    int FreeArea=Area1-MultOfArea;       //Площадь незанятой части прямоугольника
+    printf("Количество квадратов: %.d\n ",MultOfQuo1);
+    printf("Незанятая площадь: %.d ",FreeArea);
+}
+
+
+//Листинг 5
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+int main()
+{
+ int N,K;
+    printf(" Введите год ");
+    scanf("%d",&K);
+   if (K%100==0)
+   {
+     N=K/100;
+     printf(" Столетие %.d ",N);
+    }
+   else
+    {
+      N=(K-(K%100))/100 + 1;
+      printf(" Номер столетия %.d ",N);
+    }
+ 
+}
+
