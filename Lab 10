@@ -1,0 +1,167 @@
+//Листинг 1
+#include <stdio.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Справедливы неравенства A>2 и B<=3\"\n ");
+    int A;
+    int B;
+    printf (" Введите значения A и B ");
+    scanf("%d %d",&A,&B);
+    if (A > 2 & B<=3)
+    printf (" Высказывание истинно ");
+    else
+    printf(" Высказывание ложно ");
+    return 0;
+}
+
+//Листинг 2
+#include <stdio.h>
+
+int main()
+{
+    printf(" Проверка истинности высказывания \"Справедливо двойное неравенство A < B < C\"\n ");
+    int A;
+    int B;
+    int C;
+    printf (" Введите значения A, B, C ");
+    scanf("%d %d %d",&A,&B,&C);
+    if (A<B & B<C)
+    printf (" Высказывание истинно ");
+    else
+    printf(" Высказывание ложно ");
+    return 0;
+}
+
+//Листинг 3
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Данное число является четным двузначным\"\n ");
+    int chislo;
+    printf (" Введите двузначное число: ");
+    scanf("%d",&chislo);
+    if (chislo%2==0 & abs(chislo)>9 & abs(chislo)<100)
+    printf (" Высказывание истинно ");
+    else
+    printf(" Высказывание ложно ");
+    return 0;
+}
+
+
+//Листинг 4
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Цифры данного числа образуют возрастающую или убывающую последовательность\"\n ");
+    int chislo;
+    printf (" Введите трехзначное число : ");
+    scanf("%d",&chislo);
+    int num;
+    int thirdnum;
+    int secondnum;
+    int firstnum;
+    if (chislo > 99 & chislo < 1000)
+    {
+     num = chislo % 100;
+     thirdnum = num % 10;
+     secondnum = (num - thirdnum)/10;
+     firstnum = (chislo-num)/100;
+    }
+     if ((firstnum < secondnum & secondnum < thirdnum) || (firstnum > secondnum & secondnum > thirdnum))
+     printf(" Высказывание истинно ");
+     else 
+     printf(" Высказывание ложно ");
+     return 0;
+}
+
+
+//Листинг 5
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Данное число читается одинаково слева направо и справа налево\"\n ");
+    int chislo;
+    printf (" Введите четырехзначное число : ");
+    scanf("%d",&chislo);
+    int remainderOfNum1;
+    int remainderOfNum2;
+    int thirdnum;
+    int secondnum;
+    int firstnum;
+    int fourthnum;
+     int chislo2;
+    if (chislo > 999 & chislo < 10000)
+    {
+     remainderOfNum1 = chislo % 1000;
+     if (remainderOfNum1<10)
+     {
+        chislo2 = (chislo - remainderOfNum1)/1000;
+        if (chislo<10 & remainderOfNum1 == chislo2)
+        printf(" Высказывание истинно \n ");
+     }
+     remainderOfNum2 =  remainderOfNum1 % 100;
+     fourthnum = remainderOfNum2 % 10;
+     secondnum = (remainderOfNum1 - remainderOfNum2) /100;
+     firstnum = (chislo-remainderOfNum1)/1000;
+     thirdnum = (remainderOfNum2-fourthnum)/10;
+     if (fourthnum == firstnum & secondnum == thirdnum )
+     printf(" Высказывание истинно \n ");
+     else
+     printf(" Высказывание ложно \n ");
+    }
+ else
+ printf(" Введенное число не четырехзначное \n ");
+    
+}
+
+//Листинг 6
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Треугольник со сторонами a, b, c является прямоугольным\"\n ");
+    int sidea;
+    int sideb;
+    int sidec;
+    printf (" Введите стороны треугольника a, b, c ");
+    scanf("%d %d %d",&sidea,&sideb,&sidec);
+    if (sidea + sideb > sidec & sidea + sidec > sideb & sideb + sidec> sidea)
+    {
+       if (sidec==sqrt(pow(sidea,2)+pow(sideb,2)) || sidea==sqrt(pow(sideb,2)+pow(sidec,2)) || sideb == sqrt(pow(sidea,2)+pow(sidec,2)) ) 
+       printf ("Высказывание истинно");
+       else 
+       printf ("Высказывание ложно");
+    }
+    else 
+    printf("Треугольника с такими сторонами не существует");
+     return 0;
+}
+
+//Листинг 7
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    printf(" Проверка истинности высказывания \"Существует треугольник со сторонами a, b, c\"\n ");
+    int sidea;
+    int sideb;
+    int sidec;
+    printf (" Введите стороны треугольника a, b, c ");
+    scanf("%d %d %d",&sidea,&sideb,&sidec);
+    if (sidea + sideb > sidec & sidea + sidec > sideb & sideb + sidec> sidea)
+    {
+       printf("Высказывание истинно");
+    }
+    else 
+    printf("Высказывание ложно");
+     return 0;
+}
+
