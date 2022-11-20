@@ -1,7 +1,7 @@
+//Листинг 1
 #include <iostream>
 using namespace std;
 int main ()
-
  {
 float side_a, side_b,area_S, sum_of_side_P;
 cout<<"Введите значение a: "<<endl;
@@ -15,7 +15,10 @@ sum_of_side_P=2*( side_a+ side_b);
  return 0;
 }
 
-int main ()
+//Листинг 2
+#include <iostream>
+using namespace std;
+int main () 
 {
 float diameter,Length;
 const float pi=3.14;
@@ -26,7 +29,10 @@ cin>> diameter ;
  return 0;
 }
 
-int main ()
+//Листинг 3
+#include <iostream>
+using namespace std;
+int main () 
 {
 float num_a, num_b,num_c;
 cout<<"Введите значение a: "<<endl;
@@ -38,7 +44,11 @@ cout<<"Введите значение b: "<<endl;
  return 0;
 }
 
-int main()
+//Листинг 4
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main () 
 {
 float num_a, num_b, value_c, value_d, value_e, value_f;
 cout<<"Введите значение a: "<<endl;
@@ -56,8 +66,12 @@ value_f=pow(num_a,2)/pow(num_b,2);
  return 0;
 }
 
+//Листинг 5
+#include <iostream>
+#include <math.h>
+using namespace std;
 int main ()
-{
+ {
 float num_a, num_b,value_c, value_d, value_e, value_f;
 cout<<"Введите значение a: "<<endl;
 cin>> num_a ;
