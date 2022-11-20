@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+int main()
+{
+float A,B,C;
+printf ("Введите значение A\n");
+scanf ("%f",&A);
+printf ("Введите значение B\n");
+scanf ("%f",&B);
+C=A;
+A=B;
+B=C;
+printf (" Значение A=%.f и B=%.f ",A,B);
+}
+
+
+int main()
+{
+float A,B,C,temp;
+printf ("Введите значение A\n");
+scanf ("%f",&A);
+printf ("Введите значение B\n");
+scanf ("%f",&B);
+printf ("Введите значение C\n");
+scanf ("%f",&C);
+temp=A;
+A=C;
+C=B;
+B=temp;
+printf (" Значение A=%.f B=%.f C=%.f",A,B,C);
+}
+
+
+int main()
+{
+float A,B,C,temp;
+printf ("Введите значение A\n");
+scanf ("%f",&A);
+printf ("Введите значение B\n");
+scanf ("%f",&B);
+printf ("Введите значение C\n");
+scanf ("%f",&C);
+temp=A;
+A=B;
+B=C;
+C=temp;
+printf (" Значение A=%.f B=%.f C=%.f",A,B,C);
+}
+
+
+int main()
+{
+float x,y;
+printf ("Введите значение x= ");
+scanf ("%f",&x);
+y=3*pow(x,6)-6*pow(x,2)-7;
+printf ("Значение y=%.f\n",y);
+}
+
+
+int main()
+{
+float x,y;
+printf ("Введите значение x= ");
+scanf ("%f",&x);
+y=4*pow(x-3,6)-7*pow(x-3,3)+2;
+printf ("Значение y=%.f\n",y);
+}
+
+
+int main()
+{
+float A,B,C;
+printf ("Введите значение A=");
+scanf ("%f",&A);
+B=pow(A,5);
+C=A*A*A*B;
+printf ("Значение A^8=%.f\n",C);
+}
+
+
+int main()
+{
+float A,B,C,D;
+printf ("Введите значение A=");
+scanf ("%f",&A);
+B=pow(A,5);
+C=pow(A,5);
+D=B*C*A*A*A*A*A;
+printf ("Значение A^15=%.f\n",D);
+}
+
