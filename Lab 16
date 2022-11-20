@@ -1,0 +1,172 @@
+//Листинг 1
+#include <iostream>
+using namespace std;
+int main()
+{
+int N;
+int i;
+cout << " Введите количество элементов массива ";
+cin >>N;
+int *arr;
+arr=(int*)malloc(N*sizeof(int));
+
+   int j = 1;
+   for (i = 0; i <= N - 1; i++)
+   {
+       arr[i]= j;
+       cout  << arr[i] << " ";
+       j = j + 2;
+   }
+}
+
+//Листинг 2
+#include <iostream>
+using namespace std;
+int main()
+{
+int N;
+int temp = 1;
+int i = 1;
+int D;
+int A;
+cout << " Введите количество элементов массива ";
+cin >> N;
+cout << " Введите первый элемент массива ";
+cin >> A;
+cout << " Введите знаменатель геометрической прогрессии ";
+cin >> D;
+int *arr;
+arr=(int*)malloc(N*sizeof(int));
+
+   if (N > 1)
+   {
+      while ( i <= N )
+   {
+     A = A * temp;
+     temp = D;
+     cout << A << " ";
+     i++;
+   }
+   }
+}
+
+//Листинг 3 
+#include <iostream>
+using namespace std;
+int main()
+{
+int N;
+int i;
+int j;
+int A;
+int B;
+cout << " Введите количество элементов массива N > 2 ";
+cin >> N;
+cout << " Введите первый элемент A массива ";
+cin >> A;
+cout << " Введите второй элемент B массива ";
+cin >> B;
+int *arr;
+arr=(int*)malloc(N*sizeof(int));
+arr[0]=A;
+arr[1]=B;
+if (N > 2)
+{
+  for ( i = 0; i < N - (N - 2); i ++ )
+   {
+      arr[i];
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " ";
+   }
+   for ( i = 2; i < N; i ++ )
+   {
+      arr[i]= arr [i - 1] + arr[i - 2];
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " ";
+   }
+}
+else 
+cout << "Количество элементов не соответствует условиям";
+   free(arr);
+getchar();
+return 0;
+
+}
+
+//Листинг 4
+#include <iostream>
+using namespace std;
+int main()
+{
+int N;
+int i;
+int j;
+int i1;
+int j1;
+cout << " Введите количество элементов массива ";
+cin >>N;
+int *arr;
+arr=(int*)malloc(N*sizeof(int));
+
+   
+   for (i = 0 ,j = 1,i1 = N - 1, j1 = N - 1 + 1; i < N ,j < N + 1 ,i1 > N - N - 1,j1 >N - N;i++,j++,i1--,j1-- )
+   {
+      arr[i]=j;
+      arr[i1]=j1;
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " ";
+      cout <<"["<< i1 <<"]"<< " = "<< arr[i1] << " ";
+   }
+   
+   free(arr);
+getchar();
+return 0;
+
+}
+
+//Листинг 5
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int N;
+int i;
+int j;
+cout << " Введите количество элементов массива ";
+cin >>N;
+int *arr;
+arr=(int*)malloc(N*sizeof(int));
+
+   cout << "Элементы с нечетными номерами в порядке возрастания \n";
+   for (i = 1 ,j = 2; i <= N ,j <= N;i = i + 2,j=j + 2 )
+   {
+      arr[i]=j;
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " ";
+   }
+   cout << "\n";
+   cout << "Элементы с четными номерами в порядке убывания \n";
+   if (N % 2 == 0)
+    for (i = N - 2 ,j = N - 3; i >= N - (N - 2) ,j >= N - (N - 1) ;i = i - 2,j=j - 2 )
+   {
+      arr[i]=j;
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " " ;
+   }
+   else 
+   for (i = N - 1,j = N - 2; i >= N - (N - 2) ,j >= N - (N - 1) ;i = i - 2,j=j - 2 )
+   {
+      arr[i]=j;
+      cout <<"["<< i <<"]"<< " = "<< arr[i] << " " ;
+   }
+   
+   free(arr);
+getchar();
+return 0;
+
+}
+
+
+
+
+
+
+
+
