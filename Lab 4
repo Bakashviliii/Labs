@@ -15,6 +15,7 @@ sum_of_side_P=2*( side_a+ side_b);
  return 0;
 }
 
+int main ()
 {
 float diameter,Length;
 const float pi=3.14;
@@ -25,6 +26,7 @@ cin>> diameter ;
  return 0;
 }
 
+int main ()
 {
 float num_a, num_b,num_c;
 cout<<"Введите значение a: "<<endl;
@@ -36,6 +38,7 @@ cout<<"Введите значение b: "<<endl;
  return 0;
 }
 
+int main()
 {
 float num_a, num_b, value_c, value_d, value_e, value_f;
 cout<<"Введите значение a: "<<endl;
@@ -53,6 +56,7 @@ value_f=pow(num_a,2)/pow(num_b,2);
  return 0;
 }
 
+int main ()
 {
 float num_a, num_b,value_c, value_d, value_e, value_f;
 cout<<"Введите значение a: "<<endl;
